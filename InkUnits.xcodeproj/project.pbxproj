@@ -90,13 +90,13 @@
 			isa = PBXGroup;
 			children = (
 				522D080D1EC75B5100E1051B /* TestUnitGroupConversions.plist */,
+				522D07ED1EC7598100E1051B /* UnitConversionBaseTest.swift */,
 				522D07E71EC7598100E1051B /* AngleUnitConversionTest.swift */,
 				522D07E81EC7598100E1051B /* CompoundUnitConversionTest.swift */,
 				522D07E91EC7598100E1051B /* ForceUnitConversionTest.swift */,
 				522D07EA1EC7598100E1051B /* InconsistentConversionTest.swift */,
 				522D07EB1EC7598100E1051B /* LengthUnitConversionTest.swift */,
 				522D07EC1EC7598100E1051B /* MassUnitConversionTest.swift */,
-				522D07ED1EC7598100E1051B /* UnitConversionBaseTest.swift */,
 				522D07EE1EC7598100E1051B /* UnitExpansionTest.swift */,
 				522D07EF1EC7598100E1051B /* UnitGroupTest.swift */,
 			);
