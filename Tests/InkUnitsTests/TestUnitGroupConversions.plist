@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>systems</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>system one</string>
+			<key>factors</key>
+			<dict>
+				<key>a</key>
+				<integer>1</integer>
+				<key>b</key>
+				<integer>10</integer>
+				<key>c</key>
+				<integer>100</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>system two</string>
+			<key>factors</key>
+			<dict>
+				<key>d</key>
+				<integer>2</integer>
+			</dict>
+		</dict>
+	</array>
+	<key>system_conversion_factors</key>
+	<array/>
+</dict>
+</plist>

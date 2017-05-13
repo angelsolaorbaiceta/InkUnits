@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		522D07FF1EC7599E00E1051B /* UnitConversionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D07F91EC7599E00E1051B /* UnitConversionEngine.swift */; };
+		522D08001EC7599E00E1051B /* UnitConversionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D07FA1EC7599E00E1051B /* UnitConversionError.swift */; };
+		522D08011EC7599E00E1051B /* UnitExpander.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D07FC1EC7599E00E1051B /* UnitExpander.swift */; };
+		522D08021EC7599E00E1051B /* UnitExpansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D07FD1EC7599E00E1051B /* UnitExpansion.swift */; };
+		522D08031EC7599E00E1051B /* UnitGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D07FE1EC7599E00E1051B /* UnitGroup.swift */; };
+		522D08041EC75AC000E1051B /* AngleUnitConversionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D07E71EC7598100E1051B /* AngleUnitConversionTest.swift */; };
+		522D08051EC75AC400E1051B /* CompoundUnitConversionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D07E81EC7598100E1051B /* CompoundUnitConversionTest.swift */; };
+		522D08061EC75AC700E1051B /* ForceUnitConversionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D07E91EC7598100E1051B /* ForceUnitConversionTest.swift */; };
+		522D08071EC75ACB00E1051B /* InconsistentConversionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D07EA1EC7598100E1051B /* InconsistentConversionTest.swift */; };
+		522D08081EC75ACE00E1051B /* LengthUnitConversionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D07EB1EC7598100E1051B /* LengthUnitConversionTest.swift */; };
+		522D08091EC75AD000E1051B /* MassUnitConversionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D07EC1EC7598100E1051B /* MassUnitConversionTest.swift */; };
+		522D080A1EC75AD300E1051B /* UnitConversionBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D07ED1EC7598100E1051B /* UnitConversionBaseTest.swift */; };
+		522D080B1EC75AD500E1051B /* UnitExpansionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D07EE1EC7598100E1051B /* UnitExpansionTest.swift */; };
+		522D080C1EC75AD800E1051B /* UnitGroupTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D07EF1EC7598100E1051B /* UnitGroupTest.swift */; };
+		522D08111EC75D3100E1051B /* TestUnitGroupConversions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 522D080D1EC75B5100E1051B /* TestUnitGroupConversions.plist */; };
+		522D08141EC7682000E1051B /* UnitConversions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 522D08131EC7682000E1051B /* UnitConversions.plist */; };
+		522D08151EC7682900E1051B /* UnitConversions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 522D08131EC7682000E1051B /* UnitConversions.plist */; };
+		OBJ_29 /* InkUnits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* InkUnits.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		522D07E61EC6228000E1051B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_15;
+			remoteInfo = InkUnits;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		522D07E71EC7598100E1051B /* AngleUnitConversionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AngleUnitConversionTest.swift; path = ../../../InkStructure/InkUnits/InkUnitsTests/Units/AngleUnitConversionTest.swift; sourceTree = "<group>"; };
+		522D07E81EC7598100E1051B /* CompoundUnitConversionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompoundUnitConversionTest.swift; path = ../../../InkStructure/InkUnits/InkUnitsTests/Units/CompoundUnitConversionTest.swift; sourceTree = "<group>"; };
+		522D07E91EC7598100E1051B /* ForceUnitConversionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForceUnitConversionTest.swift; path = ../../../InkStructure/InkUnits/InkUnitsTests/Units/ForceUnitConversionTest.swift; sourceTree = "<group>"; };
+		522D07EA1EC7598100E1051B /* InconsistentConversionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InconsistentConversionTest.swift; path = ../../../InkStructure/InkUnits/InkUnitsTests/Units/InconsistentConversionTest.swift; sourceTree = "<group>"; };
+		522D07EB1EC7598100E1051B /* LengthUnitConversionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LengthUnitConversionTest.swift; path = ../../../InkStructure/InkUnits/InkUnitsTests/Units/LengthUnitConversionTest.swift; sourceTree = "<group>"; };
+		522D07EC1EC7598100E1051B /* MassUnitConversionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MassUnitConversionTest.swift; path = ../../../InkStructure/InkUnits/InkUnitsTests/Units/MassUnitConversionTest.swift; sourceTree = "<group>"; };
+		522D07ED1EC7598100E1051B /* UnitConversionBaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnitConversionBaseTest.swift; path = ../../../InkStructure/InkUnits/InkUnitsTests/Units/UnitConversionBaseTest.swift; sourceTree = "<group>"; };
+		522D07EE1EC7598100E1051B /* UnitExpansionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnitExpansionTest.swift; path = ../../../InkStructure/InkUnits/InkUnitsTests/Units/UnitExpansionTest.swift; sourceTree = "<group>"; };
+		522D07EF1EC7598100E1051B /* UnitGroupTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnitGroupTest.swift; path = ../../../InkStructure/InkUnits/InkUnitsTests/Units/UnitGroupTest.swift; sourceTree = "<group>"; };
+		522D07F91EC7599E00E1051B /* UnitConversionEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitConversionEngine.swift; sourceTree = "<group>"; };
+		522D07FA1EC7599E00E1051B /* UnitConversionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitConversionError.swift; sourceTree = "<group>"; };
+		522D07FC1EC7599E00E1051B /* UnitExpander.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitExpander.swift; sourceTree = "<group>"; };
+		522D07FD1EC7599E00E1051B /* UnitExpansion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitExpansion.swift; sourceTree = "<group>"; };
+		522D07FE1EC7599E00E1051B /* UnitGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitGroup.swift; sourceTree = "<group>"; };
+		522D080D1EC75B5100E1051B /* TestUnitGroupConversions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestUnitGroupConversions.plist; sourceTree = "<group>"; };
+		522D08131EC7682000E1051B /* UnitConversions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = UnitConversions.plist; path = Configuration/UnitConversions.plist; sourceTree = "<group>"; };
+		OBJ_13 /* InkUnits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = InkUnits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_14 /* InkUnitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = InkUnitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_29 /* InkUnits.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		522D08121EC7680F00E1051B /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				522D08131EC7682000E1051B /* UnitConversions.plist */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		OBJ_10 /* InkUnitsTests */ = {
+			isa = PBXGroup;
+			children = (
+				522D080D1EC75B5100E1051B /* TestUnitGroupConversions.plist */,
+				522D07E71EC7598100E1051B /* AngleUnitConversionTest.swift */,
+				522D07E81EC7598100E1051B /* CompoundUnitConversionTest.swift */,
+				522D07E91EC7598100E1051B /* ForceUnitConversionTest.swift */,
+				522D07EA1EC7598100E1051B /* InconsistentConversionTest.swift */,
+				522D07EB1EC7598100E1051B /* LengthUnitConversionTest.swift */,
+				522D07EC1EC7598100E1051B /* MassUnitConversionTest.swift */,
+				522D07ED1EC7598100E1051B /* UnitConversionBaseTest.swift */,
+				522D07EE1EC7598100E1051B /* UnitExpansionTest.swift */,
+				522D07EF1EC7598100E1051B /* UnitGroupTest.swift */,
+			);
+			name = InkUnitsTests;
+			path = Tests/InkUnitsTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_13 /* InkUnits.framework */,
+				OBJ_14 /* InkUnitsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				522D08121EC7680F00E1051B /* Configuration */,
+				OBJ_7 /* Sources */,
+				OBJ_9 /* Tests */,
+				OBJ_12 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				522D07F91EC7599E00E1051B /* UnitConversionEngine.swift */,
+				522D07FA1EC7599E00E1051B /* UnitConversionError.swift */,
+				522D07FC1EC7599E00E1051B /* UnitExpander.swift */,
+				522D07FD1EC7599E00E1051B /* UnitExpansion.swift */,
+				522D07FE1EC7599E00E1051B /* UnitGroup.swift */,
+			);
+			path = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_9 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* InkUnitsTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		OBJ_15 /* InkUnits */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_16 /* Build configuration list for PBXNativeTarget "InkUnits" */;
+			buildPhases = (
+				OBJ_19 /* Sources */,
+				OBJ_21 /* Frameworks */,
+				522D080E1EC75D1700E1051B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InkUnits;
+			productName = InkUnits;
+			productReference = OBJ_13 /* InkUnits.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		OBJ_22 /* InkUnitsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_23 /* Build configuration list for PBXNativeTarget "InkUnitsTests" */;
+			buildPhases = (
+				OBJ_26 /* Sources */,
+				OBJ_28 /* Frameworks */,
+				522D08101EC75D2D00E1051B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_30 /* PBXTargetDependency */,
+			);
+			name = InkUnitsTests;
+			productName = InkUnitsTests;
+			productReference = OBJ_14 /* InkUnitsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					OBJ_15 = {
+						LastSwiftMigration = 0830;
+					};
+				};
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "InkUnits" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5;
+			productRefGroup = OBJ_12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				OBJ_15 /* InkUnits */,
+				OBJ_22 /* InkUnitsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		522D080E1EC75D1700E1051B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522D08151EC7682900E1051B /* UnitConversions.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		522D08101EC75D2D00E1051B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522D08141EC7682000E1051B /* UnitConversions.plist in Resources */,
+				522D08111EC75D3100E1051B /* TestUnitGroupConversions.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				522D07FF1EC7599E00E1051B /* UnitConversionEngine.swift in Sources */,
+				522D08001EC7599E00E1051B /* UnitConversionError.swift in Sources */,
+				522D08011EC7599E00E1051B /* UnitExpander.swift in Sources */,
+				522D08021EC7599E00E1051B /* UnitExpansion.swift in Sources */,
+				522D08031EC7599E00E1051B /* UnitGroup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				522D080C1EC75AD800E1051B /* UnitGroupTest.swift in Sources */,
+				522D08071EC75ACB00E1051B /* InconsistentConversionTest.swift in Sources */,
+				522D08091EC75AD000E1051B /* MassUnitConversionTest.swift in Sources */,
+				522D08061EC75AC700E1051B /* ForceUnitConversionTest.swift in Sources */,
+				522D08081EC75ACE00E1051B /* LengthUnitConversionTest.swift in Sources */,
+				522D08051EC75AC400E1051B /* CompoundUnitConversionTest.swift in Sources */,
+				522D08041EC75AC000E1051B /* AngleUnitConversionTest.swift in Sources */,
+				522D080A1EC75AD300E1051B /* UnitConversionBaseTest.swift in Sources */,
+				522D080B1EC75AD500E1051B /* UnitExpansionTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_15 /* InkUnits */;
+			targetProxy = 522D07E61EC6228000E1051B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = InkUnits.xcodeproj/InkUnits_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = InkUnits;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = InkUnits;
+			};
+			name = Debug;
+		};
+		OBJ_18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = InkUnits.xcodeproj/InkUnits_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = InkUnits;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = InkUnits;
+			};
+			name = Release;
+		};
+		OBJ_24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = InkUnits.xcodeproj/InkUnitsTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				TARGET_NAME = InkUnitsTests;
+			};
+			name = Debug;
+		};
+		OBJ_25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = InkUnits.xcodeproj/InkUnitsTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				TARGET_NAME = InkUnitsTests;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_16 /* Build configuration list for PBXNativeTarget "InkUnits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_17 /* Debug */,
+				OBJ_18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "InkUnits" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_23 /* Build configuration list for PBXNativeTarget "InkUnitsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_24 /* Debug */,
+				OBJ_25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
