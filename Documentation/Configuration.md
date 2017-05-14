@@ -1,10 +1,159 @@
 # Configuration
-The units supported by _InkUnits_ can be checked in the [configuration file](Configuration/UnitConversions.plist).
+- [Introduction](#introduction)
+- [Configuration File Structure](#configuration-file-structure)
+- [Same System Conversion Factors](#same-system-conversion-factors)
+- [Conversion Factors Between Systems](#conversion-factors-between-systems)
 
-Units are arranged by groups based on the magnitude they measure (length, mass...). Each group may define conversion factors for one or more unit systems. There are three unit systems used at the moment:
+## Introduction
+The units supported by _InkUnits_ can be checked in the [configuration file](../Configuration/UnitConversions.plist). This configuration file is formatted as a **plist**. You can read about _plist_ files [here](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html#//apple_ref/doc/uid/TP40009254-SW1).
 
-- **Universal**: Used when a magnitude is represented with the same units worldwide (e.g. angles in radians or time in seconds).
+Units are arranged in groups based on the magnitude they measure (length, mass...). Each group may define conversion factors for one or more unit systems. There are three unit systems used at the moment:
+
+- **Universal**: Used when a magnitude is represented using the same units worldwide (e.g. angles in radians or time in seconds).
 - **International**: [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units).
 - **US**: [Imperial / US Customary System of Units](https://en.wikipedia.org/wiki/Imperial_and_US_customary_measurement_systems).
 
-For each of the supported unit systems in a group, conversion factors between
+For each of the supported unit systems in a group, conversion factors between units are provided in a dictionary-like way (key: value). Also, conversion factors between different units systems need to be provided. This is explain in detail in the next sections.
+
+## Configuration File Structure
+`UnitConversions.plist` file has the following external structure:
+
+```xml
+<dict>
+    <key>Unit Group Name</key>
+    <dict>
+        <!-- Unit group data -->
+    </dict>
+
+    <key>Unit Group Name</key>
+    <dict>
+        <!-- Unit group data -->
+    </dict>
+</dict>
+```
+
+As you can see, the configuration file is a dictionary of names of unit groups as keys, with a dictionary of data as value. Each of the **unit groups** has the following structure:
+
+```xml
+<key>Unit Group Name</key>
+<dict>
+    <!-- [1] SAME SYSTEM CONVERSION FACTORS -->
+    <key>systems</key>
+    <array>
+        <dict>
+            <key>name</key>
+            <string>unit system name</string>
+
+            <key>factors</key>
+            <dict>
+                <key>unit name</key>
+                <real>1.0</real>
+                <!-- other factors here ... --->
+            </dict>
+        </dict>
+        <!-- other unit systems here ... -->
+    </array>
+
+    <!-- [2] CONVERSION FACTORS BETWEEN SYSTEMS -->
+    <!-- factors to convert units between the systems defined above -->
+    <!-- only necessary if there is more than one system of units -->
+    <key>system_conversion_factors</key>
+    <array>
+        <dict>
+            <key>from</key>
+            <string>unit system name ONE</string>
+
+            <key>to</key>
+            <string>unit system name TWO</string>
+
+            <key>factor</key>
+            <real>1.0</real>
+        </dict>
+        <dict>
+            <key>from</key>
+            <string>unit system name TWO</string>
+
+            <key>to</key>
+            <string>unit system name ONE</string>
+
+            <key>factor</key>
+            <real>1.0</real>
+        </dict>
+    </array>
+</dict>
+```
+
+The configuration of one unit group has two parts:
+1. An array of supported unit systems (_universal_, _international_, _us_). This part is called the **same system conversion factors**.
+2. An array of conversion factors between systems defined in 1. This section is called the **conversion factors between systems**.
+
+These two parts are described in the two sections below. Let's see a simplified **example** of a unit group with two unit systems:
+
+```xml
+<key>length</key>
+<dict>
+    <!-- [1] SAME SYSTEM CONVERSION FACTORS -->
+    <key>systems</key>
+    <array>
+        <!-- International System -->
+        <dict>
+            <key>name</key>
+            <string>international</string>
+            <key>factors</key>
+            <dict>
+                <key>cm</key><real>0.01</real>
+                <key>dm</key><real>0.1</real>
+                <key>m</key><real>1</real>
+            </dict>
+        </dict>
+
+        <!-- US System -->
+        <dict>
+            <key>name</key>
+            <string>us</string>
+            <key>factors</key>
+            <dict>
+                <key>mi</key><real>5280</real>
+                <key>ft</key><real>1</real>
+                <key>in</key><real>0.08333</real>
+            </dict>
+        </dict>
+    </array>
+
+    <!-- [2] CONVERSION FACTORS BETWEEN SYSTEMS -->
+    <key>system_conversion_factors</key>
+    <array>
+        <dict>
+            <key>from</key><string>international</string>
+            <key>to</key><string>us</string>
+            <key>factor</key><real>3.2808</real>
+        </dict>
+        <dict>
+            <key>from</key><string>us</string>
+            <key>to</key><string>international</string>
+            <key>factor</key><real>0.3048</real>
+        </dict>
+    </array>
+</dict>
+```
+
+## Same System Conversion Factors
+These are the conversion factors to convert between untis in the same unit system. For instance, in the example above there are three factors defined, namely:
+
+- **cm** = 0.01
+- **dm** = 0.1
+- **m** = 1
+
+It is important to note that, there must always be a factor of 1 for every unit system. The unit with a factor of one is the **base unit**. In the case of _length_ in the _International System_, meters have been chosen to be the base units, but this is arbitrary. The fators of other units represent the **number that the magnitude to be converted needs to be multiplied by to be in base units**. Thus, if we have centimeters and want to convert to meters, we have to multiply the amount by 0.01, which is the factor in the configuration. If we wanted the opposite conversion (from meters to centimeters), we would need to multiply the amount by the opposite factor listed in centimeters, or, what is the same, divide the amount by the factor in centimeters (1 / 0.01 = 100).
+
+So, remember:
+- convert from **X** to **base** -> multiply by factor listed in **X**
+- convert from **base** to **X** -> divide by factor listend in **base**
+
+**What happens when we want to convert from two non-base units?**
+Say we want to convert from centimeters to decimeters. The way we compute the factor is by computing two separate factors and merging them into one as follows:
+1. Compute factor from **X** to **base**
+2. Compute factor from **base** to **Y**
+3. Multiply factors computed in _(1)_ and _(2)_
+
+## Conversion Factors Between Systems

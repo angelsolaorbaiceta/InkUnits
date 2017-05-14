@@ -3,6 +3,13 @@
 # InkUnits
 Smart and lightweight unit conversion module written in Swift. _InkUnits_ is responsible for all unit conversions behind [InkStructure](http://www.inkstructure.com) OSX app.
 
+- [Basic Usage](#basic-usage)
+- [Installation](#installation)
+    - [Swift Package Manager](#swift-package-manager)
+    - [CocoaPods](#cocoapods)
+    - [Carthage](#carthage)
+- [Currently Supported Units](#currently-supported-units)
+
 # Basic Usage
 Instantiate `UnitConversionEngine`:
 ```swift
@@ -70,6 +77,9 @@ dependencies: [
 ## CocoaPods
 TODO: add CocoaPods support.
 
+## Carthage
+TODO: add Carthage support.
+
 # Currently Supported Units
 For more details about how the configuration of _InkUnits_ works and how to add more conversion factors, refer to [Configuration](Documentation/Configuration.md).
 
@@ -83,8 +93,10 @@ Units that are currently present in the configuration are collected in the follo
 | Mass       | -                | mg, cg, dg, g, dag, hg, kg   | oz, lb                |
 | Force      | -                | N, kN, MN                    | lbf                   |
 
-Note that, any compound unit using this simple ones will also be able to be converted by _InkUnits_, and there is where its power lies. For example, the following are understood:
+Note that, any compound unit using these simple ones will also be able to be converted by _InkUnits_, and there is where its power lies. For example, the following are understood by the conversion engine:
 
 - **Area**: _cm2_, _m2_, _ft2_...
 - **Density**: _g/cm3_, _kg/m3_, _oz/ft3_...
 - **Moment**: _N·m_, _lbf·ft_...
+
+To add more unit conversion factors, see instructions in [Configuration Documentation page](Documentation/Configuration.md).
