@@ -24,6 +24,7 @@
 		522D08111EC75D3100E1051B /* TestUnitGroupConversions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 522D080D1EC75B5100E1051B /* TestUnitGroupConversions.plist */; };
 		522D08141EC7682000E1051B /* UnitConversions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 522D08131EC7682000E1051B /* UnitConversions.plist */; };
 		522D08151EC7682900E1051B /* UnitConversions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 522D08131EC7682000E1051B /* UnitConversions.plist */; };
+		522D08171EC84A1500E1051B /* TimeUnitConversionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D08161EC84A1500E1051B /* TimeUnitConversionTest.swift */; };
 		OBJ_29 /* InkUnits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* InkUnits.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		522D07FE1EC7599E00E1051B /* UnitGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitGroup.swift; sourceTree = "<group>"; };
 		522D080D1EC75B5100E1051B /* TestUnitGroupConversions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestUnitGroupConversions.plist; sourceTree = "<group>"; };
 		522D08131EC7682000E1051B /* UnitConversions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = UnitConversions.plist; path = Configuration/UnitConversions.plist; sourceTree = "<group>"; };
+		522D08161EC84A1500E1051B /* TimeUnitConversionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUnitConversionTest.swift; sourceTree = "<group>"; };
 		OBJ_13 /* InkUnits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = InkUnits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_14 /* InkUnitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = InkUnitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				522D080D1EC75B5100E1051B /* TestUnitGroupConversions.plist */,
 				522D07ED1EC7598100E1051B /* UnitConversionBaseTest.swift */,
+				522D08161EC84A1500E1051B /* TimeUnitConversionTest.swift */,
 				522D07E71EC7598100E1051B /* AngleUnitConversionTest.swift */,
 				522D07E81EC7598100E1051B /* CompoundUnitConversionTest.swift */,
 				522D07E91EC7598100E1051B /* ForceUnitConversionTest.swift */,
@@ -258,6 +261,7 @@
 				522D08051EC75AC400E1051B /* CompoundUnitConversionTest.swift in Sources */,
 				522D08041EC75AC000E1051B /* AngleUnitConversionTest.swift in Sources */,
 				522D080A1EC75AD300E1051B /* UnitConversionBaseTest.swift in Sources */,
+				522D08171EC84A1500E1051B /* TimeUnitConversionTest.swift in Sources */,
 				522D080B1EC75AD500E1051B /* UnitExpansionTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,136 +2,212 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>length</key>
+	<key>time</key>
 	<dict>
 		<key>systems</key>
 		<array>
 			<dict>
-				<key>name</key><string>international</string>
+				<key>name</key>
+				<string>universal</string>
 				<key>factors</key>
 				<dict>
-					<key>mm</key><real>0.001</real>
-					<key>cm</key><real>0.01</real>
-					<key>dm</key><real>0.1</real>
-					<key>m</key><real>1</real>
-					<key>dam</key><real>10</real>
-					<key>hm</key><real>100</real>
-					<key>km</key><real>1000</real>
+					<key>ms</key>
+					<real>0.001</real>
+					<key>s</key>
+					<integer>1</integer>
+					<key>min</key>
+					<integer>60</integer>
+					<key>h</key>
+					<integer>3600</integer>
+					<key>day</key>
+					<integer>86400</integer>
+					<key>week</key>
+					<integer>604800</integer>
+					<key>month</key>
+					<real>2592000</real>
+					<key>year</key>
+					<integer>31556952</integer>
 				</dict>
-			</dict>
-			<dict>
-				<key>name</key><string>us</string>
-				<key>factors</key>
-				<dict>
-					<key>mi</key><real>5280</real>
-					<key>ft</key><real>1</real>
-					<key>in</key><real>0.08333</real>
-				</dict>
-			</dict>
-		</array>
-		<key>system_conversion_factors</key>
-		<array>
-			<dict>
-				<key>from</key><string>international</string>
-				<key>to</key><string>us</string>
-				<key>factor</key><real>3.2808</real>
-			</dict>
-			<dict>
-				<key>from</key><string>us</string>
-				<key>to</key><string>international</string>
-				<key>factor</key><real>0.3048</real>
 			</dict>
 		</array>
 	</dict>
-
 	<key>angle</key>
 	<dict>
 		<key>systems</key>
 		<array>
 			<dict>
-				<key>name</key><string>universal</string>
+				<key>name</key>
+				<string>universal</string>
 				<key>factors</key>
 				<dict>
-					<key>rad</key><real>1</real>
-					<key>deg</key><real>0.017453292519943</real>
+					<key>rad</key>
+					<real>1</real>
+					<key>deg</key>
+					<real>0.017453292519943</real>
 				</dict>
 			</dict>
 		</array>
 	</dict>
-
+	<key>length</key>
+	<dict>
+		<key>systems</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>international</string>
+				<key>factors</key>
+				<dict>
+					<key>mm</key>
+					<real>0.001</real>
+					<key>cm</key>
+					<real>0.01</real>
+					<key>dm</key>
+					<real>0.1</real>
+					<key>m</key>
+					<real>1</real>
+					<key>dam</key>
+					<real>10</real>
+					<key>hm</key>
+					<real>100</real>
+					<key>km</key>
+					<real>1000</real>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>us</string>
+				<key>factors</key>
+				<dict>
+					<key>mi</key>
+					<real>5280</real>
+					<key>ft</key>
+					<real>1</real>
+					<key>in</key>
+					<real>0.08333</real>
+				</dict>
+			</dict>
+		</array>
+		<key>system_conversion_factors</key>
+		<array>
+			<dict>
+				<key>from</key>
+				<string>international</string>
+				<key>to</key>
+				<string>us</string>
+				<key>factor</key>
+				<real>3.2808</real>
+			</dict>
+			<dict>
+				<key>from</key>
+				<string>us</string>
+				<key>to</key>
+				<string>international</string>
+				<key>factor</key>
+				<real>0.3048</real>
+			</dict>
+		</array>
+	</dict>
 	<key>mass</key>
 	<dict>
 		<key>systems</key>
 		<array>
 			<dict>
-				<key>name</key><string>international</string>
+				<key>name</key>
+				<string>international</string>
 				<key>factors</key>
 				<dict>
-					<key>mg</key><real>0.001</real>
-					<key>cg</key><real>0.01</real>
-					<key>dg</key><real>0.1</real>
-					<key>g</key><real>1</real>
-					<key>dag</key><real>10</real>
-					<key>hg</key><real>100</real>
-					<key>kg</key><real>1000</real>
+					<key>mg</key>
+					<real>0.001</real>
+					<key>cg</key>
+					<real>0.01</real>
+					<key>dg</key>
+					<real>0.1</real>
+					<key>g</key>
+					<real>1</real>
+					<key>dag</key>
+					<real>10</real>
+					<key>hg</key>
+					<real>100</real>
+					<key>kg</key>
+					<real>1000</real>
 				</dict>
 			</dict>
 			<dict>
-				<key>name</key><string>us</string>
+				<key>name</key>
+				<string>us</string>
 				<key>factors</key>
 				<dict>
-					<key>oz</key><real>1</real>
-					<key>lb</key><real>16</real>
+					<key>oz</key>
+					<real>1</real>
+					<key>lb</key>
+					<real>16</real>
 				</dict>
 			</dict>
 		</array>
 		<key>system_conversion_factors</key>
 		<array>
 			<dict>
-				<key>from</key><string>international</string>
-				<key>to</key><string>us</string>
-				<key>factor</key><real>0.03527396</real>
+				<key>from</key>
+				<string>international</string>
+				<key>to</key>
+				<string>us</string>
+				<key>factor</key>
+				<real>0.03527396</real>
 			</dict>
 			<dict>
-				<key>from</key><string>us</string>
-				<key>to</key><string>international</string>
-				<key>factor</key><real>28.349523125</real>
+				<key>from</key>
+				<string>us</string>
+				<key>to</key>
+				<string>international</string>
+				<key>factor</key>
+				<real>28.349523125</real>
 			</dict>
 		</array>
 	</dict>
-
 	<key>force</key>
 	<dict>
 		<key>systems</key>
 		<array>
 			<dict>
-				<key>name</key><string>international</string>
+				<key>name</key>
+				<string>international</string>
 				<key>factors</key>
 				<dict>
-					<key>N</key><real>1</real>
-					<key>kN</key><real>1000</real>
-					<key>MN</key><real>1000000</real>
+					<key>N</key>
+					<real>1</real>
+					<key>kN</key>
+					<real>1000</real>
+					<key>MN</key>
+					<real>1000000</real>
 				</dict>
 			</dict>
 			<dict>
-				<key>name</key><string>us</string>
+				<key>name</key>
+				<string>us</string>
 				<key>factors</key>
 				<dict>
-					<key>lbf</key><real>1</real>
+					<key>lbf</key>
+					<real>1</real>
 				</dict>
 			</dict>
 		</array>
 		<key>system_conversion_factors</key>
 		<array>
 			<dict>
-				<key>from</key><string>international</string>
-				<key>to</key><string>us</string>
-				<key>factor</key><real>0.224808943871</real>
+				<key>from</key>
+				<string>international</string>
+				<key>to</key>
+				<string>us</string>
+				<key>factor</key>
+				<real>0.224808943871</real>
 			</dict>
 			<dict>
-				<key>from</key><string>us</string>
-				<key>to</key><string>international</string>
-				<key>factor</key><real>4.4482216</real>
+				<key>from</key>
+				<string>us</string>
+				<key>to</key>
+				<string>international</string>
+				<key>factor</key>
+				<real>4.4482216</real>
 			</dict>
 		</array>
 	</dict>

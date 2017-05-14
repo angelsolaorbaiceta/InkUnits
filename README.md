@@ -1,10 +1,10 @@
 ![Alt InkUnits](Documentation/Images/InkUnits.png)
 
 # InkUnits
-Smart and lightweight unit conversion module written in Swift. _InkUnits_ is the responsible of all unit conversions behind [InkStructure](http://www.inkstructure.com) OSX app.
+Smart and lightweight unit conversion module written in Swift. _InkUnits_ is responsible for all unit conversions behind [InkStructure](http://www.inkstructure.com) OSX app.
 
 # Basic Usage
-First, instantiate `UnitConversionEngine`:
+Instantiate `UnitConversionEngine`:
 ```swift
 let converter = UnitConversionEngine()
 ```
@@ -31,11 +31,11 @@ Alternatively, you can work with exceptions:
 ```swift
 do
 {
-	try converter.convert(100, from: "N·cm", to: "kg/m")
+    try converter.convert(100, from: "N·cm", to: "kg/m")
 }
 catch UnitConversionError.inconsistentUnits(let sourceUnits, let targetUnits)
 {
-	print("Cannot convert from \(sourceUnits) to \(targetUnits)")
+    print("Cannot convert from \(sourceUnits) to \(targetUnits)")
 }
 ```
 
@@ -62,6 +62,7 @@ Units that are currently present in the configuration are collected in the follo
 
 | Magnitude  | Universal Units  | International Units          | US / Imperial Units   |
 | ---------: | :--------------: | :--------------------------: | :-------------------: |
+| Time       | ms, s, min, h, day, week, month, year | -       | -                     |
 | Angle      | rad, deg         | -                            | -                     |
 | Length     | -                | mm, cm, dm, m, dam, hm, km   | mi, ft, in            |
 | Mass       | -                | mg, cg, dg, g, dag, hg, kg   | oz, lb                |

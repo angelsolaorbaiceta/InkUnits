@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "93861942BF7E5D75A54F99844CDFEA630FAFD8D6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "93861942BF7E5D75A54F99844CDFEA630FAFD8D6" : 9223372036854775807,
+    "CE32E3FFC2A45037C22C9079A885501CECE911A7" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9CA67209-985E-466F-B6B1-35AE18FDABBF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "93861942BF7E5D75A54F99844CDFEA630FAFD8D6" : "InkUnits\/",
+    "CE32E3FFC2A45037C22C9079A885501CECE911A7" : "InkStructure\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "InkUnits",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "InkUnits.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:angelsolaorbaiceta\/InkUnits.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "93861942BF7E5D75A54F99844CDFEA630FAFD8D6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:angelsolaorbaiceta\/InkStructure.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CE32E3FFC2A45037C22C9079A885501CECE911A7"
+    }
+  ]
+}
