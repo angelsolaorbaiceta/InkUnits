@@ -13,7 +13,6 @@ Then use the engine to make conversions:
 ```swift
 try! converter.convert(25, from: "kg/m2", to: "g/cm2")
 ```
-
 Yields:
 > 2.5
 
@@ -35,17 +34,30 @@ do
 }
 catch UnitConversionError.inconsistentUnits(let sourceUnits, let targetUnits)
 {
-    print("Cannot convert from \(sourceUnits) to \(targetUnits)")
+    print("Oops! couldn't convert from \(sourceUnits) to \(targetUnits)")
 }
 ```
+Prints:
+> "Oops! couldn't convert from N·cm to kg/m"
 
+Or this other way:
+```swift
+do
+{
+    try converter.convert(100, from: "N·cm", to: "kg/m")
+}
+catch let error as UnitConversionError
+{
+    print(error.description)
+}
+```
 Prints:
 > "Cannot convert from N·cm to kg/m"
 
 See more in the [documentation](Documentation/Usage.md).
 
 # Installation
-You can add _InkUnits_ to your projects as follows:
+You can add _InkUnits_ to your projects in one of the following ways:
 
 ## Swift Package Manager
 Add the following dependency in your `Package.swift` file:
@@ -54,6 +66,9 @@ dependencies: [
     .Package(url: "https://github.com/angelsolaorbaiceta/InkUnits.git", majorVersion: 1)
 ]
 ```
+
+## CocoaPods
+TODO: add CocoaPods support.
 
 # Currently Supported Units
 For more details about how the configuration of _InkUnits_ works and how to add more conversion factors, refer to [Configuration](Documentation/Configuration.md).
