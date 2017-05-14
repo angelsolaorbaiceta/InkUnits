@@ -1,7 +1,7 @@
 ![Alt InkUnits](Documentation/Images/InkUnits.png)
 
 # InkUnits
-Smart and lightweight unit conversion module written in Swift. _InkUnits_ is the responsible of all unit conversions behind [InkStructure](www.inkstructure.com) OSX app.
+Smart and lightweight unit conversion module written in Swift. _InkUnits_ is the responsible of all unit conversions behind [InkStructure](http://www.inkstructure.com) OSX app.
 
 # Basic Usage
 First, instantiate `UnitConversionEngine`:
@@ -20,7 +20,7 @@ Yields:
 See more in the [documentation](Documentation/Usage.md).
 
 # Installation
-You can add _InkUnits_ in several ways:
+You can add _InkUnits_ to your projects in several ways:
 
 ## Swift Package Manager
 Add the following dependency in your `Package.swift` file:
