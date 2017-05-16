@@ -3,6 +3,7 @@
 - [Configuration File Structure](#configuration-file-structure)
 - [Same System Conversion Factors](#same-system-conversion-factors)
 - [Conversion Factors Between Systems](#conversion-factors-between-systems)
+- [Conversion Algorithm](#conversion-algorithm)
 
 ## Introduction
 The units supported by _InkUnits_ can be checked in the [configuration file](../Configuration/UnitConversions.plist). This configuration file is formatted as a **plist**. You can read about _plist_ files [here](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html#//apple_ref/doc/uid/TP40009254-SW1).
@@ -138,7 +139,7 @@ These two parts are described in the two sections below. Let's see a simplified 
 ```
 
 ## Same System Conversion Factors
-These are the conversion factors to convert between untis in the same unit system. For instance, in the example above there are three factors defined, namely:
+These are the conversion factors to convert between untis belonging to the same unit system. For instance, in the example above there are three factors defined, namely:
 
 - **cm** = 0.01
 - **dm** = 0.1
@@ -157,3 +158,26 @@ Say we want to convert from centimeters to decimeters. The way we compute the fa
 3. Multiply factors computed in _(1)_ and _(2)_
 
 ## Conversion Factors Between Systems
+One more piece of data is necessary for conversions to happen: a factor to convert units in different systems. _InkUnits_ defines factors to convert between **base units** in the different systems of a unit group.
+
+We need as many of these factors as [permutations without repetition](https://www.mathsisfun.com/combinatorics/combinations-permutations.html) we have between the unit systems of a group. Permutation means that order matters, because, it is not the same factor we need to convert from _system A_ base units to _system B_ base units than the one for the opposite conversion (from _system A_ to _system B_).
+
+For example, say we have the unit group of **length**, which has defined two unit systems: **International** and **US**. We need a total of `n! / (n - r)!` conversion factors, where `n` is the number of unit systems and `r` is two (we combine them two by two). This yields a total of two factors, namely:
+
+1. from **International** base units to **US** base units (_cm_ -> _ft_)
+2. from **US** base units to **International** base units (_ft_ -> _cm_)
+
+## Conversion Algorithm
+Now that we have an understanding of how we use factors to convert between units in the same unit system and factors to convert between base units on different systems, let's take a look to the complete algorithm used to compute **conversion factors between non-base units on different unit systems**, that is, the most generic case.
+
+Say we have two [unit systems](Terminology/#unit-system) inside a same [unit group](Terminology/#unit-group). Let's call them:
+- System A
+- System B
+
+We want to convert from **Ax**, unit from _System A_ to **Bx**, unit from _System B_. In order to keep the example as generic as possible, let's assume neither **Ax** nor **Bx** are [base units](Terminology/#base-unit).
+
+The steps to compute the conversion factor from **Ax** to **Bx** are as follow:
+1. Compute **fa**: factor to convert **Ax** to base units in _System A_
+2. Compute **fab**: factor to convert from base units in _System A_ to base units in _System B_
+3. Compute **fb**: factor to convert from base units in _System B_ to **Bx**
+4. The factor: `f = fa * fab * fb` 
