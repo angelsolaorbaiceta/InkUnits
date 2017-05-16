@@ -8,7 +8,7 @@
 ## Introduction
 The units supported by _InkUnits_ can be checked in the [configuration file](../Configuration/UnitConversions.plist). This configuration file is formatted as a **plist**. You can read about _plist_ files [here](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html#//apple_ref/doc/uid/TP40009254-SW1).
 
-Units are arranged in groups based on the magnitude they measure (length, mass...). Each group may define conversion factors for one or more unit systems. There are three unit systems used at the moment:
+Units are arranged in [groups](Terminology.md/#unit-group) based on the magnitude they measure (length, mass...). Each group may define [conversion factors](Terminology.md/#conversion-factor) for one or more unit systems. There are three unit systems used at the moment:
 
 - **Universal**: Used when a magnitude is represented using the same units worldwide (e.g. angles in radians or time in seconds).
 - **International**: [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units).
@@ -139,13 +139,13 @@ These two parts are described in the two sections below. Let's see a simplified 
 ```
 
 ## Same System Conversion Factors
-These are the conversion factors to convert between untis belonging to the same unit system. For instance, in the example above there are three factors defined, namely:
+These are the conversion factors to convert between untis belonging to the same [unit system](Terminology.md/#unit-system). For instance, in the example above there are three factors defined, namely:
 
 - **cm** = 0.01
 - **dm** = 0.1
 - **m** = 1
 
-It is important to note that, there must always be a factor of 1 for every unit system. The unit with a factor of one is the **base unit**. In the case of _length_ in the _International System_, meters have been chosen to be the base units, but this is arbitrary. The fators of other units represent the **number that the magnitude to be converted needs to be multiplied by to be in base units**. Thus, if we have centimeters and want to convert to meters, we have to multiply the amount by 0.01, which is the factor in the configuration. If we wanted the opposite conversion (from meters to centimeters), we would need to multiply the amount by the opposite factor listed in centimeters, or, what is the same, divide the amount by the factor in centimeters (1 / 0.01 = 100).
+It is important to note that, there must always be a factor of 1 for every unit system. The unit with a factor of one is the [base unit](Terminology.md/#base-unit). In the case of _length_ in the _International System_, meters have been chosen to be the base units, but this is arbitrary. The fators of other units represent the **number that the magnitude to be converted needs to be multiplied by to be in base units**. Thus, if we have centimeters and want to convert to meters, we have to multiply the amount by 0.01, which is the factor in the configuration. If we wanted the opposite conversion (from meters to centimeters), we would need to multiply the amount by the opposite factor listed in centimeters, or, what is the same, divide the amount by the factor in centimeters (`1 / 0.01 = 100`).
 
 So, remember:
 - convert from **X** to **base** -> multiply by factor listed in **X**
@@ -170,14 +170,14 @@ For example, say we have the unit group of **length**, which has defined two uni
 ## Conversion Algorithm
 Now that we have an understanding of how we use factors to convert between units in the same unit system and factors to convert between base units on different systems, let's take a look to the complete algorithm used to compute **conversion factors between non-base units on different unit systems**, that is, the most generic case.
 
-Say we have two [unit systems](Terminology/#unit-system) inside a same [unit group](Terminology/#unit-group). Let's call them:
+Say we have two [unit systems](Terminology.md/#unit-system) inside a same [unit group](Terminology.md/#unit-group). Let's call them:
 - System A
 - System B
 
-We want to convert from **Ax**, unit from _System A_ to **Bx**, unit from _System B_. In order to keep the example as generic as possible, let's assume neither **Ax** nor **Bx** are [base units](Terminology/#base-unit).
+We want to convert from **Ax**, unit from _System A_ to **Bx**, unit from _System B_. In order to keep the example as generic as possible, let's assume neither **Ax** nor **Bx** are [base units](Terminology.md/#base-unit).
 
 The steps to compute the conversion factor from **Ax** to **Bx** are as follow:
 1. Compute **fa**: factor to convert **Ax** to base units in _System A_
 2. Compute **fab**: factor to convert from base units in _System A_ to base units in _System B_
 3. Compute **fb**: factor to convert from base units in _System B_ to **Bx**
-4. The factor: `f = fa * fab * fb` 
+4. The factor: `f = fa * fab * fb`
